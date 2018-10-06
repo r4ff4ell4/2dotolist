@@ -1,9 +1,8 @@
 var express = require('express');
 var utenti = express.Router();
+var controller = require('./controller.js');
 
-utenti.get('/', function(req, res){
-	res.send('tutti gli utenti');
-});
+utenti.get('/', controller.getAllUsers);
 
 
 
